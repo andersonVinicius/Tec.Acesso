@@ -1,5 +1,4 @@
 %Criado em 21/05/2017 %}
-<<<<<<< HEAD
 %Codigo que calcula taxa de tranferencia de um cabo DSL com varia sec�oes
 %Bitola:[0.4 0.5 0.63 0.90]
 %diferentes ou n�o
@@ -17,10 +16,8 @@ function[gama, z0] = calcula_cabo2(u,f)
 %Dados gerais
 w = 2 * pi * f; % frequencia angular Hz
 sigma = 5.8 * 10^7;  %Condutividade - S/m
-<<<<<<< HEAD
 m0= 1.2566*(10^(-6)); % permeabilidade magnetica do vacuo H/m (ou T·m/A).
 epson0 = 8.85418782*10^-12; % Permissividade eletrica do vacuo A^2 s^2 kg^-1 m^-3.
-=======
 m0= 1.2566*(10^(-6)); % permeabilidade magnetica do vacuo H/m (ou TÂ·m/A).
 epson0 = 8.85418782*10^-12; % Permissividade eletrica do vacuo.
 
