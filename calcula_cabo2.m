@@ -32,6 +32,7 @@ a = [0.87 0.87 0.53 0.87];
 b = [0.25 0.25 0.14 0.25];
 
 
+<<<<<<< HEAD
 %calculo do da sec��o
 r = 1 + (2 * s(u) / d(u));
 r0 = 4 / (pi * sigma * ( d(u) ^ 2 )); 
@@ -51,6 +52,26 @@ zs = x1 + z1; %Imped�ncia s�rie de um par-tran�ado sem o efeito do tran�
 
 z0 = sqrt(zs./yp); %Imped�ncia caracteristica em funcao da frequencia
 gama = sqrt(zs.* yp.*(1+(pi*v(u)*r*d(u))^2)); %
+=======
+%calculo do da secção
+r = 1 + (2 * s(u) / d(u));
+r0 = 4 / (pi * sigma * ( d(u) ^ 2 )); 
+wb = (1i* w * m0 / pi);
+nb = 1 + (1 /(24 * (r ^ 2) - 2)); % Valores assinóticos de n para baixas frequências
+na = (4 * (r ^ 2) - 1) * (log(2*r) - acosh(r)) ; % Valores assinóticos de n para altas frequências
+n = na - ((na - nb)./(sqrt(1 + ((1/9) * (1 - (1 / (r ^ 2)))) * (wb / r0)))); %Fator multiplicativo que corrige o erro ao aproximar a impedância devido ao efeito de proximidade considerando apenas um termo.
+
+x = (1i * w * pi * epson0) / acosh(r);
+z = (1 - (1/(9*(r^(1/10)-(19/24)))));
+yp = x .*  (epsonM(u) + ((epsonS(u) - epsonM(u))./ ((1 + ((1i*w*t(u)).^(1-a(u))).^b(u))).^z)); %Admitância paralelo de um par-trançado sem o efeito do trançado.
+
+x1 = sqrt(-wb*r0).*( besselj(0,(sqrt(-wb/r0))) )./( besselj(1,(sqrt(-wb/r0))) );
+z1 = wb.*( log(2*r) + (n./ (1+4*r^(2).* (besselj(0,(sqrt(-wb/r0)))./besselj(2,(sqrt(-wb/r0)))))));
+zs = x1 + z1; %Impedância série de um par-trançado sem o efeito do trançado 
+
+z0 = sqrt(zs./yp); %Impedância caracteristica em funcao da frequencia
+gama = sqrt(zs .* yp .* (1+(pi*v(u)*r*d(u))^2) ); %
+>>>>>>> ed552b2e5a63b7ed2de24decb53d73a0dfd8a66e
 
 
 end
