@@ -32,7 +32,7 @@ a = [0.87 0.87 0.53 0.87];
 b = [0.25 0.25 0.14 0.25];
 
 
-<<<<<<< HEAD
+
 %calculo do da sec��o
 r = 1 + (2 * s(u) / d(u));
 r0 = 4 / (pi * sigma * ( d(u) ^ 2 )); 
@@ -52,7 +52,7 @@ zs = x1 + z1; %Imped�ncia s�rie de um par-tran�ado sem o efeito do tran�
 
 z0 = sqrt(zs./yp); %Imped�ncia caracteristica em funcao da frequencia
 gama = sqrt(zs.* yp.*(1+(pi*v(u)*r*d(u))^2)); %
-=======
+
 %calculo do da secção
 r = 1 + (2 * s(u) / d(u));
 r0 = 4 / (pi * sigma * ( d(u) ^ 2 )); 
@@ -71,7 +71,6 @@ zs = x1 + z1; %Impedância série de um par-trançado sem o efeito do trançado
 
 z0 = sqrt(zs./yp); %Impedância caracteristica em funcao da frequencia
 gama = sqrt(zs .* yp .* (1+(pi*v(u)*r*d(u))^2) ); %
->>>>>>> ed552b2e5a63b7ed2de24decb53d73a0dfd8a66e
 
 
 end
